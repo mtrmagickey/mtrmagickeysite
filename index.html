@@ -135,7 +135,7 @@
         </a-assets>
         <!-- At the minimum we'd also want to setup an environment light, although we might also need to explore background options -->
         <!--   <a-light id="sun" angle="60" color="#FFF" intensity="0.4" type="hemisphere"></a-light>
-     -->
+    -->
         <!-- Hand controls are defined to get raycast capability to allow button interaction while using them -->
         <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
         <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
@@ -167,8 +167,8 @@
                   scale="0.45 0.40 0.45"
                   animation__textscale="property: scale; to: .66 .66 .66; dur: 30000; easing: linear; dir: alternate; loop: true"
                   animation__textbounce="property: position; from: -2 13 0; to: -3 18 0; dur: 10000; easing: linear; dir: alternate; loop: true">
->
-   
+            >
+
             <a-entity id="whitemagickey"
                       visible="false"
                       rotation="0 6 0"
@@ -287,107 +287,117 @@
                       playtracks=""
                       class="mouse"
                       animation__keymovement="property: position; from: -10 -5 -7.5; to: -10 -5 2.5; dur: 15000; easing: linear; dir: alternate; loop: true"></a-entity>
->
+            >
 
 
-            </a-entity>
+        </a-entity>
 
 
 
 
-            <a-sky id="sky" material="color: #2b2622" geometry="radius: 1000"></a-sky>
-            <a-entity id="zoetonehome"
-                      scale="2 2 2" position="-8 0 -26" rotation="0 0 0"
-                      class="mouse">
-                <a-entity id="Silver"
-                          position="-4.5 0 0"
-                          geometry="primitive: sphere"
-                          material="color:  #8c8c8c;  metalness:  0.5; emissive:  #8c8c8c;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
-                          class="mouse"
-                          audioanalyser="src: #lane1; beatDetectionDecay: 0.99,
+        <a-sky id="sky" material="color: #2b2622" geometry="radius: 1000"></a-sky>
+        <a-entity id="zoetonehome"
+                  scale="2 2 2" position="-8 0 -26" rotation="0 0 0"
+                  class="mouse">
+            <a-entity id="Silver"
+                      position="-4.5 0 0"
+                      geometry="primitive: sphere"
+                      material="color:  #8c8c8c;  metalness:  0.5; emissive:  #8c8c8c;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
+                      class="mouse"
+                      audioanalyser="src: #lane1; beatDetectionDecay: 0.99,
     beatDetectionMinVolume: 15; enableBeatDetection: true"
-                          audio-level-scale="positionScale: 1 20 1"
-                          mixin="magickeywhitetextaway magickeygoldtextaway magickeypinktextaway magickeybluetextaway magickeygreentextaway splashaway  splashin"
-                          event-set__textcallsilver="
+                      audio-level-scale="positionScale: 1 20 1"
+                      mixin="magickeywhitetextaway magickeygoldtextaway magickeypinktextaway magickeybluetextaway magickeygreentextaway splashaway  splashin"
+                      event-set__textcallsilver="
                 _event : click;
                 _target : #silvermagickey;
                 animation.property : visible;
                 animation.to: true;"></a-entity>
-                <a-entity id="Blue"
-                          position="4.5 0 0"
-                          geometry="primitive: sphere"
-                          material="color:  #1ebcb8;  metalness:  0.5; emissive:  #1ebcb8;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
-                          class="mouse"
-                          audioanalyser="src: #lane2; beatDetectionDecay: 0.99,
+            <a-entity id="Blue"
+                      position="4.5 0 0"
+                      geometry="primitive: sphere"
+                      material="color:  #1ebcb8;  metalness:  0.5; emissive:  #1ebcb8;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
+                      class="mouse"
+                      audioanalyser="src: #lane2; beatDetectionDecay: 0.99,
     beatDetectionMinVolume: 15; enableBeatDetection: true"
-                          audio-level-scale="positionScale: 1 20 1"
-                          mixin="magickeywhitetextaway magickeysilvertextaway magickeygoldtextaway magickeypinktextaway magickeygreentextaway splashaway"
-                          ring-on-beat="analyserEl: #Blue"
-                          event-set__textcallblue="
+                      audio-level-scale="positionScale: 1 20 1"
+                      mixin="magickeywhitetextaway magickeysilvertextaway magickeygoldtextaway magickeypinktextaway magickeygreentextaway splashaway"
+                      ring-on-beat="analyserEl: #Blue"
+                      event-set__textcallblue="
                 _event : click;
                 _target : #bluemagickey;
                 animation.property : visible;
                 animation.to: true;"></a-entity>
-                <a-entity id="Gold"
-                          position="-2.25 0"
-                          geometry="primitive: sphere"
-                          material="color:  #f9dea2;  metalness:  0.5; emissive:  #f9dea2;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
-                          class="mouse"
-                          audioanalyser="src: #lane3; beatDetectionDecay: 0.90,
+            <a-entity id="Gold"
+                      position="-2.25 0"
+                      geometry="primitive: sphere"
+                      material="color:  #f9dea2;  metalness:  0.5; emissive:  #f9dea2;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
+                      class="mouse"
+                      audioanalyser="src: #lane3; beatDetectionDecay: 0.90,
     beatDetectionMinVolume: 5; enableBeatDetection: true"
-                          ring-on-beat2="analyserEl: #Gold"
-                          audio-level-scale="positionScale: 1 40 1"
-                          mixin="magickeywhitetextaway magickeysilvertextaway magickeypinktextaway magickeybluetextaway magickeygreentextaway splashaway"
-                          event-set__textcallgold="
+                      ring-on-beat2="analyserEl: #Gold"
+                      audio-level-scale="positionScale: 1 40 1"
+                      mixin="magickeywhitetextaway magickeysilvertextaway magickeypinktextaway magickeybluetextaway magickeygreentextaway splashaway"
+                      event-set__textcallgold="
                 _event : click;
                 _target : #goldmagickey;
                 animation.property : visible;
                 animation.to: true;"></a-entity>
-                <a-entity id="Pink"
-                          position="2.25 0 0"
-                          geometry="primitive: sphere"
-                          material="color:  #df7592;  metalness:  0.5; emissive:  #df7592;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
-                          class="mouse"
-                          audioanalyser="src: #lane4; beatDetectionDecay: 0.90,
+            <a-entity id="Pink"
+                      position="2.25 0 0"
+                      geometry="primitive: sphere"
+                      material="color:  #df7592;  metalness:  0.5; emissive:  #df7592;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
+                      class="mouse"
+                      audioanalyser="src: #lane4; beatDetectionDecay: 0.90,
     beatDetectionMinVolume: 5; enableBeatDetection: true"
-                          audio-level-scale="positionScale: 1 40 1"
-                          mixin="magickeywhitetextaway magickeysilvertextaway magickeygoldtextaway magickeybluetextaway magickeygreentextaway splashaway"
-                          event-set__textcallpink="
+                      audio-level-scale="positionScale: 1 40 1"
+                      mixin="magickeywhitetextaway magickeysilvertextaway magickeygoldtextaway magickeybluetextaway magickeygreentextaway splashaway"
+                      event-set__textcallpink="
                 _event : click;
                 _target : #pinkmagickey;
                 animation.property : visible;
                 animation.to: true;"></a-entity>
-                <a-entity id="Green"
-                          position="6.75 0 0"
-                          geometry="primitive: sphere"
-                          material="color:  #48bc1e;  metalness:  0.5; emissive:  #48bc1e;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
-                          class="mouse"
-                          audioanalyser="src: #lane5; beatDetectionDecay: 0.99,
+            <a-entity id="Green"
+                      position="6.75 0 0"
+                      geometry="primitive: sphere"
+                      material="color:  #48bc1e;  metalness:  0.5; emissive:  #48bc1e;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
+                      class="mouse"
+                      audioanalyser="src: #lane5; beatDetectionDecay: 0.99,
     beatDetectionMinVolume: 15; enableBeatDetection: true"
-                          audio-level-scale="positionScale: 1 20 1"
-                          mixin="magickeywhitetextaway magickeysilvertextaway magickeygoldtextaway magickeypinktextaway magickeybluetextaway splashaway "
-                          event-set__textcallgreen="
+                      audio-level-scale="positionScale: 1 20 1"
+                      mixin="magickeywhitetextaway magickeysilvertextaway magickeygoldtextaway magickeypinktextaway magickeybluetextaway splashaway "
+                      event-set__textcallgreen="
                 _event : click;
                 _target : #greenmagickey;
                 animation.property : visible;
                 animation.to: true;"></a-entity>
-                <a-entity id="White"
-                          position="-6.75 0 0"
-                          geometry="primitive: sphere"
-                          material="color:  #ffffff;  metalness:  0.5; emissive:  #ffffff;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
-                          class="mouse"
-                          audioanalyser="src: #lane6; beatDetectionDecay: 0.99,
+            <a-entity id="White"
+                      position="-6.75 0 0"
+                      geometry="primitive: sphere"
+                      material="color:  #ffffff;  metalness:  0.5; emissive:  #ffffff;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true"
+                      class="mouse"
+                      audioanalyser="src: #lane6; beatDetectionDecay: 0.99,
     beatDetectionMinVolume: 15; enableBeatDetection: true"
-                          ring-on-beat2="analyserEl: #White"
-                          audio-level-scale="positionScale: 1 20 1"
-                          mixin="magickeysilvertextaway magickeygoldtextaway magickeypinktextaway magickeybluetextaway magickeygreentextaway splashaway "
-                          event-set__textcallwhite="
+                      ring-on-beat2="analyserEl: #White"
+                      audio-level-scale="positionScale: 1 20 1"
+                      mixin="magickeysilvertextaway magickeygoldtextaway magickeypinktextaway magickeybluetextaway magickeygreentextaway splashaway "
+                      event-set__textcallwhite="
                 _event : click;
                 _target : #whitemagickey;
                 animation.property : visible;
                 animation.to: true;"></a-entity>
-            </a-entity>
         </a-entity>
+
+        <a-entity layout="type: pyramid; margin: 2" position="0 0 0">
+            <a-entity geometry="primitive: plane" material="" scale="10 10 10" id="option1"></a-entity>
+            <a-entity geometry="primitive: plane" material="" scale="10 10 10" id="option2"></a-entity>
+            <a-entity geometry="primitive: plane" material="" scale="10 10 10" id="option3"></a-entity>
+            <a-entity geometry="primitive: plane" material="" scale="10 10 10" id="option4"></a-entity>
+            <a-entity geometry="primitive: plane" material="" scale="10 10 10" id="option5"></a-entity>
+            <a-entity geometry="primitive: plane" material="" scale="10 10 10" id="option6"></a-entity>
+        </a-entity>
+
+        
 
 
 
