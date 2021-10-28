@@ -1,43 +1,43 @@
 ﻿<!DOCTYPE html>
 <head>
-  <meta charset="utf-8">
-  <title>MTR Magic Key • mtrmagickey.com • Made with A-Frame</title>
-  <meta name="description" content="MTR Magic Key • Raleigh, NC">
-  
-<!--   This is a series of components and plugins used -->
-<!-- AFrame webXR Library   -->
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<!-- Superhands allows drag and rotation function -->
-<script src="./superhands.js"></script>  
-<!--Environment Component  -->
-  <script src="./environment-component.js"></script>
-<!--Buttons and other event system uses event-set component and proxy events -->
-  <script src="./eventset.js"></script> 
-  <script src="./proxy-event.js"></script>
-<!--   Physics isn't used in a major way but is loaded in to support development -->
-  <script src="./aframeextras.js'"></script>
-<!-- GSAP (GreenSock Animation Platform) for animation addons like tweening -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-  <script type="module">
-    import "./GreenSockThree.js";>
-  </script>
-  
-<!--   The layout of buttons utilizes layout component and text positioning uses look-at-->
-<script src="./layout.js"></script> 
-    <script src="./lookat.js"></script> 
-  
-<!--   unique examination box components -->
-  <script src="./Rotatable.js"></script>
-  <script src="./ScaleButton.js"></script>
+    <meta charset="utf-8">
+    <title>MTR Magic Key • mtrmagickey.com • Made with A-Frame</title>
+    <meta name="description" content="MTR Magic Key • Raleigh, NC">
 
-  
-  <script src="./linkhref.js"></script>
-<script src="./info-message.js"></script>
-<script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
-    
-<!--     Local scripts -->
+    <!--   This is a series of components and plugins used -->
+    <!-- AFrame webXR Library   -->
+    <script src="./aframe.js"></script>
+    <!-- Superhands allows drag and rotation function -->
+    <script src="./superhands.js"></script>
+    <!--Environment Component  -->
+    <script src="./environment-component.js"></script>
+    <!--Buttons and other event system uses event-set component and proxy events -->
+    <script src="./eventset.js"></script>
+    <script src="./proxy-event.js"></script>
+    <!--   Physics isn't used in a major way but is loaded in to support development -->
+    <script src="./aframeextras.js'"></script>
+    <!-- GSAP (GreenSock Animation Platform) for animation addons like tweening -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script type="module">
+        import "./GreenSockThree.js";>
+    </script>
+
+    <!--   The layout of buttons utilizes layout component and text positioning uses look-at-->
+    <script src="./layout.js"></script>
+    <script src="./lookat.js"></script>
+
+    <!--   unique examination box components -->
+    <script src="./Rotatable.js"></script>
+    <script src="./ScaleButton.js"></script>
+
+
+    <script src="./linkhref.js"></script>
+    <script src="./info-message.js"></script>
+    <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+
+    <!--     Local scripts -->
     <script src="./playtracks.js"></script>
-    <script src="./aframe-audioanalyser-component.js"></script> 
+    <script src="./aframe-audioanalyser-component.js"></script>
     <script src="./audio-level-scale-component.js"></script>
     <script src="./audio-ring-on-beat.js"></script>
     <script src="./audio-ring-on-beat2.js"></script>
@@ -48,6 +48,7 @@
     <script src="./audio-light-on-beat.js"></script>
     <script src="shader-grid-glitch.js"></script>
     <script src="shader-hologram.js"></script>
+    <script src="./aframehref.js"></script>
 </head>
 <body>
   
@@ -296,7 +297,7 @@
 
         <a-sky id="sky" material="color: #2b2622" geometry="radius: 1000"></a-sky>
         <a-entity id="zoetonehome"
-                  scale="2 2 2" position="-8 30 -26" rotation="180 0 0"
+                  scale="2 2 2" position="-8 25 -26" rotation="180 0 0"
                   class="mouse">
             <a-entity id="Silver"
                       position="-4.5 0 0"
@@ -390,31 +391,95 @@
         <a-entity layout="type: box; columns: 3; margin: 5;align: center;marginRow: 10" position="-9 -8.5 0">
             <a-entity geometry="primitive: plane" class="mouse" material="color:  #f9dea2;  metalness:  0.5; emissive:  #f9dea2;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true" scale="4 4 4" id="option1">
                 <a-entity
-                          troika-text="value:Collections;
-                       align: center;
-                       color: #f9dea2;
-                       font: ./assets/MagicKeyTitlingFont.ttf ;
-                       fontSize: .1; fillOpacity:  0.5;
-                       outlineBlur:  0.34;  outlineColor:  #8c8c8c;  outlineOpacity:  0.64;  outlineWidth:  0.02;
-                       strokeColor:  #f9dea2;  strokeOpacity:  4.01;  strokeWidth:  0.05"
-                          position="0 3.5 0"></a-entity>
+                          href
+                          troika-text="
+                          value:  Community;
+                          align:  center;
+                          color:  #f9dea2;
+                          font:  ./assets/MagicKeyTitlingFont.ttf;
+                          fontSize:  0.275;
+                          fillOpacity:  0.5;
+                          outlineBlur:  0.3;
+                          outlineColor:  #8c8c8c;
+                          outlineOpacity:  0.17;
+                          outlineWidth:  0.02;
+                          strokeColor:  #f9dea2;
+                          strokeOpacity:  4.01;
+                          strokeWidth:  0.05"
+                          position="0 2 0"></a-entity>
             </a-entity>
 
 
             <a-entity geometry="primitive: plane" class="mouse" material="color:  #8c8c8c;  metalness:  0.5; emissive:  #8c8c8c;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true" scale="4 4 4" id="option2">
-
+                <a-entity troika-text="
+                          value:  Classics;
+                          align:  center;
+                          color:  #f9dea2;
+                          font:  ./assets/MagicKeyTitlingFont.ttf;
+                          fontSize:  0.275;
+                          fillOpacity:  0.5;
+                          outlineBlur:  0.3;
+                          outlineColor:  #8c8c8c;
+                          outlineOpacity:  0.17;
+                          outlineWidth:  0.02;
+                          strokeColor:  #f9dea2;
+                          strokeOpacity:  4.01;
+                          strokeWidth:  0.05"
+                          position="0 2 0"></a-entity>
             </a-entity>
 
             <a-entity geometry="primitive: plane" class="mouse" material="color:  #f9dea2;  metalness:  0.5; emissive:  #f9dea2;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true" scale="4 4 4" id="option3">
-
+                <a-entity troika-text="
+                          value:  Hark!;
+                          align:  center;
+                          color:  #f9dea2;
+                          font:  ./assets/MagicKeyTitlingFont.ttf;
+                          fontSize:  0.275;
+                          fillOpacity:  0.5;
+                          outlineBlur:  0.3;
+                          outlineColor:  #8c8c8c;
+                          outlineOpacity:  0.17;
+                          outlineWidth:  0.02;
+                          strokeColor:  #f9dea2;
+                          strokeOpacity:  4.01;
+                          strokeWidth:  0.05"
+                          position="0 2 0"></a-entity>
             </a-entity>
 
             <a-entity geometry="primitive: plane" class="mouse" material="color:  #8c8c8c;  metalness:  0.5; emissive:  #8c8c8c;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true" scale="4 4 4" id="option4">
-
+                <a-entity troika-text="
+                          value:  Behold!;
+                          align:  center;
+                          color:  #f9dea2;
+                          font:  ./assets/MagicKeyTitlingFont.ttf;
+                          fontSize:  0.275;
+                          fillOpacity:  0.5;
+                          outlineBlur:  0.3;
+                          outlineColor:  #8c8c8c;
+                          outlineOpacity:  0.17;
+                          outlineWidth:  0.02;
+                          strokeColor:  #f9dea2;
+                          strokeOpacity:  4.01;
+                          strokeWidth:  0.05"
+                          position="0 2 0"></a-entity>
             </a-entity>
 
             <a-entity geometry="primitive: plane" class="mouse" material="color:  #f9dea2;  metalness:  0.5; emissive:  #f9dea2;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true" scale="4 4 4" id="option5">
-
+                <a-entity troika-text="
+                          value:  Heed!;
+                          align:  center;
+                          color:  #f9dea2;
+                          font:  ./assets/MagicKeyTitlingFont.ttf;
+                          fontSize:  0.275;
+                          fillOpacity:  0.5;
+                          outlineBlur:  0.3;
+                          outlineColor:  #8c8c8c;
+                          outlineOpacity:  0.17;
+                          outlineWidth:  0.02;
+                          strokeColor:  #f9dea2;
+                          strokeOpacity:  4.01;
+                          strokeWidth:  0.05"
+                          position="0 2 0"></a-entity>
             </a-entity>
 
             <a-entity geometry="primitive: plane" class="mouse" material="color:  #8c8c8c;  metalness:  0.5; emissive:  #8c8c8c;  emissiveIntensity:  0.6; roughness:  0.75; wireframe:  true" scale="4 4 4" id="option6"
